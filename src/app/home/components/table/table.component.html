@@ -1,0 +1,12 @@
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let header of tableHeaders">{{header.label}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of tableData | slice: (currentPage-1) * 10 : currentPage * 10">
+      <td *ngFor="let header of tableHeaders">{{ row[header.id] }}</td>
+    </tr>
+  </tbody>
+</table>

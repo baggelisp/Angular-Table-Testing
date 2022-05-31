@@ -1,0 +1,10 @@
+
+<app-search-input (onChangeValue)="onSearchInputChange($event)"></app-search-input>
+
+
+<app-pagination [items]="dataFiltered$ | async" (changePage)="onChangePage($event)"></app-pagination>
+
+
+<app-table [currentPage]="currentPage" [tableHeaders]="tableHeaders" [tableData]="dataFiltered$ | async"></app-table>
+
+
